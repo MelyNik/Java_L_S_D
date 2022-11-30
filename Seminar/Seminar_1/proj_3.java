@@ -1,4 +1,4 @@
-package Java_S_L1.Seminar.Seminar_1;
+package Java_L_S_D.Seminar.Seminar_1;
 
 import java.time.LocalTime;
 import java.util.Scanner;

@@ -1,4 +1,4 @@
-package Java_S_L1.Lectures.Lesson_1;
+package Java_L_S_D.Lectures.Lesson_1;
 // Начало программы это class и main,
 /**
  * Project
