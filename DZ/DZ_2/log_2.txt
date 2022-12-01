@@ -1,0 +1,8 @@
+дек. 01, 2022 3:22:25 PM Java_L_S_D.DZ.DZ_2.Dz_2 main
+INFO: 15.0
+дек. 01, 2022 3:22:29 PM Java_L_S_D.DZ.DZ_2.Dz_2 main
+INFO: 10.0
+дек. 01, 2022 3:22:33 PM Java_L_S_D.DZ.DZ_2.Dz_2 main
+INFO: **
+дек. 01, 2022 3:22:33 PM Java_L_S_D.DZ.DZ_2.Dz_2 main
+INFO: 15.0 ** 10.0 = 5.766504E11
