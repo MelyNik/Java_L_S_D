@@ -1,0 +1,6 @@
+file.txttask_1.javatask_2.javatask_3.javatask_4.javacontent.txt
+file.txt
+task_1.java
+task_2.java
+task_3.java
+task_4.java

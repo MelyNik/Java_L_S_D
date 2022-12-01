@@ -1,4 +1,4 @@
-package Java_S_L1.DZ.DZ_1;
+package Java_L_S_D.DZ.DZ_1;
 // Вывести все простые числа от 1 до 1000
 public class Dz_2 {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package Java_S_L1.DZ.DZ_1;
+package Java_L_S_D.DZ.DZ_1;
 // Вычислить n-ое треугольного число(сумма чисел от 1 до n), n! (произведение чисел от 1 до n)
 import java.util.Scanner;
 public class Dz_1 {
