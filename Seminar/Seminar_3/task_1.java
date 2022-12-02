@@ -1,31 +1,30 @@
 package Java_L_S_D.Seminar.Seminar_3;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collection;
-import java.util.Random;
+import java.util.*;
 
-
-public record task_1() {
+// Заполнить список названием планет Солничной системы в произвольном порядке с повторениями.
+// Вывести название каждой планеты и количество его повторений в списке.
+public class task_1 {
     public static void main(String[] args) {
+        String[] planets = {"Меркурий", "Венера", "Земля", "Марс", "Юпитер", "Сатурн", "Уран", "Нептун", "Плутон"};
         Random rnd = new Random();
-        // ArrayList<Integer> intList = new ArrayList<>(Arrays.asList(4, 5, 67, 78, 4, 3, 5));  
-        ArrayList<Integer> intList = new ArrayList<>();
-        for (int i = 0; i < 10; i++) {
-            intList.add(rnd.nextInt(100));
+        ArrayList<String> pla = new ArrayList<>();
+        for (int i = 0; i < 15; i++) {
+            pla.add(planets[rnd.nextInt(0,planets.length - 1)]);
         }
-        printArray(intList);
+        for (String i : pla) {
+            System.out.print(i + " ");
+        }
+        System.out.println();
+        // for (int i = 0; i < pla.toArray().length; i++) {
+        //     if(pla.get[i] == pla[i+1])
+        // }
 
-        //Collection.sort(intList);
-        printArray(intList);
+        Set<String> mySet = new HashSet<>(pla);                          // Создали счётчик
+        for (String s : mySet) {                                         // одинаковых элементов
+            System.out.println(s + " " + Collections.frequency(pla, s)); // в массиве.
+        }
 
     }
-    public static void printArray(ArrayList<Integer> array) {
-        StringBuilder print = new StringBuilder();
-        for (Integer number : array) {
-            print.append(number + ", ");       
-        }
-        //String result = print.substring(0, print.length() - 2);
-        System.out.println(print.substring(0, print.length() - 2));
-    }
-}
+} 
+

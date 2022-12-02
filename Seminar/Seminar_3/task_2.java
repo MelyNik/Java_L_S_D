@@ -1,12 +1,9 @@
 package Java_L_S_D.Seminar.Seminar_3;
 
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.HashSet;
-import java.util.Random;
-import java.util.Set;
+import java.util.*;
+
 // Заполнить список названием планет Солничной системы в произвольном порядке с повторениями.
-// Вывести название каждой планеты и количество его повторений в списке.
+// Вывести название планет которые не повторяются.
 public class task_2 {
     public static void main(String[] args) {
         String[] planets = {"Меркурий", "Венера", "Земля", "Марс", "Юпитер", "Сатурн", "Уран", "Нептун", "Плутон"};
@@ -19,13 +16,20 @@ public class task_2 {
             System.out.print(i + " ");
         }
         System.out.println();
-        // for (int i = 0; i < pla.toArray().length; i++) {
-        //     if(pla.get[i] == pla[i+1])
-        // }
 
-        Set<String> mySet = new HashSet<>(pla);
-        for (String s : mySet) {
-            System.out.println(s + " " + Collection.frequency(pla, s));
-        }
+//        Collections.sort(pla);
+//
+//        for (int i = 0; i < pla.size() - 1 ; i++) {
+//            if(pla.get(i) == pla.get(i+1))
+//            {
+//                pla.remove(pla.get(i));
+//                i--;
+//            }
+//        }
+//        System.out.println(pla);
+
+        Set<String> mySet = new HashSet<>(pla);  // Создали переменную с неповторяющимеся элементами.
+        System.out.println(mySet);
+
     }
 }
