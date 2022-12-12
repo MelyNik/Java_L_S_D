@@ -21,7 +21,7 @@ import java.util.Map;
 
 public class task_2 {
     public static void main(String[] args) {
-        
+        System.out.println(izomorph("paper", "title"));
     }
     public static boolean izomorph(String s1, String s2) {
         if(s1.length() != s2.length())
@@ -32,11 +32,19 @@ public class task_2 {
             {
                 return true;
             }
-        Map<Character, String> list = new HashMap<>();
+        Map<Character, Character> list = new HashMap<>();
         for (int i = 0; i < s1.length(); i++) {
             char a = s1.charAt(i);
             char b = s2.charAt(i);
-            if(list.containsKey(list))
+            if(list.containsKey(a) && b != list.get(a))
+                {
+                    return false;
+                }
+            else 
+                {
+                    list.put(a,b);
+                }
         }
+        return true;
     }
 }
