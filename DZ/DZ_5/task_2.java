@@ -32,25 +32,37 @@ import java.util.TreeMap;
 
 public class task_2 {
     public static void main(String[] args) {
-        String[] str = {"Иванов Иван", "Сидоров Иван", "Белов Николай", "Чернов Николай", "Романов Николай", "Петров Петр"};
-        ArrayList <String> staff = new ArrayList<>(Arrays.asList(str));
-        TreeMap <Integer, String> names = new TreeMap<>(Collections.reverseOrder());
-        for (int i = 0; i < staff.size(); i++) {
-            String[] FIO = staff.get(i).split(" ");
-            String name = FIO[1];
-            int count = 0;
-            for (int j = 0; j < staff.size(); j++) {
-                String[] FIO1 = staff.get(j).split(" ");
-                String name1 = FIO1[1];
-                if (name.equals(name1)) {
+        String[] array = {"Мария Савина", "Светлана Петрова", "Иван Ежов", "Анна Крутова", "Иван Мечников", "Кристина Белова", "Илья Петин", "Анна Мусина", "Анна Владимирова", "Илья Акунин"};
+        
+        ArrayList <String> staf = new ArrayList<>(Arrays.asList(array));
+        TreeMap <Double, String> list = new TreeMap<>(Collections.reverseOrder());
+        
+        for (int i = 0; i < staf.size(); i++) {
+            String[] nameSurname_1 = staf.get(i).split(" ");
+
+            String name_1 = nameSurname_1[0];
+
+            double count = 0;
+            for (int j = 0; j < staf.size(); j++) {
+                String[] nameSurname_2 = staf.get(j).split(" ");
+                String name_2 = nameSurname_2[0];
+                
+                if (name_1.equals(name_2)) {
                     count ++;
                 }
             }
-            if (!names.containsValue(name)) {
-                names.put(count, name);
-            }
+            if(count > 1)
+                {
+                    if (!list.containsValue(name_1)) {
+                        while(list.containsKey((double)count))
+                            {
+                                count += 0.1;
+                            }
+                        list.put(count, name_1);
+                    }
+                }
         }
-        for (var el : names.entrySet()) {
+        for (var el : list.entrySet()) {
             System.out.print(el.getKey() + " " + el.getValue() + "\n");
         }
     }
