@@ -53,15 +53,18 @@ public class task_1 {
         w1.salary = 300;
         w1.id = 3000;
 
-        System.out.println(w1);
+        System.out.println(w1.toString());
         System.out.println(w2);
         System.out.println(w3);
+        System.out.println(w4);
 
         System.out.println(w1 == w4);
         System.out.println(w1.equals(w4));
 
         var workers = new HashSet<Worker>(Arrays.asList(w1, w2, w3));
         System.out.println(workers.contains(w4));
+
+
 
     }
 }
