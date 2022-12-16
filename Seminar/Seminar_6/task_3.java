@@ -43,7 +43,8 @@ public class task_3 {
         System.out.println(cat_2);
         System.out.println(cat_3);
 
-        Set<Cat_task_3> cats = new HashSet<>();
+        Set<Cat_task_3> cats = new HashSet<>(); // Создали сэт с уникальными объектами. Но если у одинаковых
+                                                // объектов разных хэшкод, то обекты становятся ранхыми и уникальными.
         cats.add(cat_2);
         cats.add(cat_3);
 

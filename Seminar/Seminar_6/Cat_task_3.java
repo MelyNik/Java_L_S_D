@@ -84,5 +84,31 @@ public class Cat_task_3 {
             ", Doctor='" + getDoctor() + "'" +
             "}";
     }
+
+    @Override // Сровнение объектов по заданным нами параметроам.
+    public boolean equals(Object obj){
+        if(this == obj)
+            {
+                return true;
+            }
+        if(!(obj instanceof Cat_task_3))
+            {
+                return false;
+            }
+        Cat_task_3 cat = (Cat_task_3) obj;
+        if(this.getName().equals(cat.getName()) && this.passport == cat.getPassport())
+            {
+                return true;
+            }
+        return false;
+    }
+
+    @Override // Проверка хэшкода.
+    public int hashCode() {
+        return (int)passport + name.hashCode(); // Если сложить int + long на выходе всегда будет лонг.
+                                                // Т.е. к числу паспорта мы прибавляем число хэшкода.
+                                                // Опять же у одинаковых String - строк будет одинаковая хэшфункция.
+        
+    }
     
 }
